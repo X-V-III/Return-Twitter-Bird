@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Return Twitter Bird",
+  "description": "Replaces the new X logo with Twitter bird",
+  "version": "0.1",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon_16_16.png"
+  },
+  "icons": {
+    "16": "images/icon_16_16.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "images/icon_16_16.png" ],
+      "matches": [ "https://twitter.com/*" ]
+    }],
+  "content_scripts": [
+    {
+      "js": ["scripts/main.js"],
+      "matches": [
+        "https://twitter.com/*"
+      ]
+    }
+  ],
+  "permissions": ["favicon"]
+}
